@@ -8,6 +8,6 @@ export default {
         Footer
     },
     data() {
-        
+
     }
 }
