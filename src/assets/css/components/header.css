@@ -1,8 +1,5 @@
-.cmn-header {
-    width: 100%;
-    margin: 0 auto;
-}
-.cmn-header .cmn-h1 {
+header h2 {
+    width: 700px;
     padding: 30px;
     background-color: #5c3441;
     color: #ffffff;

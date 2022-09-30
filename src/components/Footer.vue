@@ -1,9 +1,11 @@
 <template>
-  <footer class="cmn-footer">
-    <p class="cmn-p">Copyright</p>
+  <footer>
+    <h5>Copyright</h5>
   </footer>
 </template>
 
 <style scoped>
+
 @import "../assets/css/components/footer.css";
 </style>
+
