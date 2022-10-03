@@ -2,7 +2,7 @@
   <div class="container">
     <Header title="From OJT Project2"/>
     <div>
-      <h2 class="sec-h2">Welcome from Movies List...</h2>
+      <h2 class="sec-h2">{{ movieTitle }}</h2>
     </div>
     <ul>
       <SecondContent

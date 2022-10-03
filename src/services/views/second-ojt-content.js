@@ -9,6 +9,7 @@ export default {
     },
     data() {
         return {
+            movieTitle: 'Welcome from Movies List...',
             movies: []
         }
     },
