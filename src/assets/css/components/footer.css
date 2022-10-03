@@ -1,5 +1,8 @@
-footer h5 {
-    width: 700px;
+.cmn-footer {
+    width: 100%;
+    margin: 0 auto;
+}
+.cmn-footer .cmn-p {
     padding: 15px;
     background-color: #5c3441;
     color: #ffffff;
