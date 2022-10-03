@@ -1,6 +1,6 @@
 <template>
     <header>
-        <h2>Welcom My Blog</h2>
+        <h2>Welcome {{title}}</h2>
     </header>
 </template>
 
@@ -8,3 +8,5 @@
 
 @import "../assets/css/components/header.css";
 </style>
+<script src="../services/components/header.js">
+</script>
