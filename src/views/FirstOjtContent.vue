@@ -1,8 +1,8 @@
 <template>
   <div class="container">
-    <Header />
-    <Content />
-    <Footer />
+    <Header title="From OJT Project1"/>
+    <Content/>
+    <Footer/>
   </div>
 </template>
 
