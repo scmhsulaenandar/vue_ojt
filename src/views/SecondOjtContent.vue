@@ -2,7 +2,7 @@
   <div class="container">
     <Header title="From OJT Project2"/>
     <div>
-      <h1 class="sec-h1">Welcome from Movies List...</h1>
+      <h2 class="sec-h2">Welcome from Movies List...</h2>
     </div>
     <ul>
       <SecondContent
@@ -11,7 +11,6 @@
         :index="index"
         :names-array="movies.map(a => a.name)"
     />
-    <!-- <li v-for="movie in movies" :key="movie.id">{{movie.name}}</li> -->
     </ul>
     <Footer/>
   </div>
