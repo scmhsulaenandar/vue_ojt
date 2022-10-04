@@ -1,5 +1,4 @@
 import Header from "../../components/Header.vue"
-import ThirdContent from "../../components/ThirdContent.vue"
 import Footer from "../../components/Footer.vue"
 import useVuelidate from '@vuelidate/core'
 import { required, email, url, sameAs } from '@vuelidate/validators'
@@ -14,7 +13,6 @@ export function validName(name) {
 export default {
     components: {
         Header,
-        ThirdContent,
         Footer
     },
 
@@ -52,4 +50,13 @@ export default {
             }
         }
     },
+    methods: {
+        resetform() {
+            this.$refs.form.reset();
+        },
+        onSubmit() {
+            alert("Name : " + this.form.name + "\nEmail : " + this.form.email + "\nURL : " + this.form.url + "\nPhoneNumber : " + this.form.phoneNo);
+            this.$refs.form.reset();
+        }
+    }
 }

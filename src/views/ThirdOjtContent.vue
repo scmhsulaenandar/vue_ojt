@@ -1,7 +1,7 @@
 <template>
   <div class="container">
-    <Header title="From OJT Project1" />
-    <form @submit.prevent="onSubmit" class="third-form">
+    <Header title="From OJT Project3" />
+    <form @submit.prevent="onSubmit" class="third-form" ref="form">
       <!-- First and Last Name Row -->
       <div class="row">
         <div class="col-sm-2">
@@ -15,7 +15,6 @@
               type="text"
               v-model="v$.form.name.$model"
             />
-            <div class="pre-icon os-icon os-icon-user-male-circle"></div>
             <!-- Error Message -->
             <div
               class="input-errors"
@@ -41,7 +40,6 @@
               type="email"
               v-model="v$.form.email.$model"
             />
-            <div class="pre-icon os-icon os-icon-email-2-at2"></div>
             <!-- Error Message -->
             <div
               class="input-errors"
@@ -67,7 +65,6 @@
               type="url"
               v-model="v$.form.url.$model"
             />
-            <div class="pre-icon os-icon os-icon-user-male-circle"></div>
             <!-- Error Message -->
             <div
               class="input-errors"
@@ -93,7 +90,6 @@
               type="number"
               v-model="v$.form.phoneNo.$model"
             />
-            <div class="pre-icon os-icon os-icon-user-male-circle"></div>
             <!-- Error Message -->
             <div
               class="input-errors"
@@ -108,10 +104,11 @@
 
       <!-- Submit Button -->
       <div class="buttons-w">
-        <button class="btn btn-secondary btn-cancel" style="margin-left: 250px">
+        <button type="button" class="btn btn-secondary btn-cancel" style="margin-left: 250px" @click="resetform">
           Cancel
         </button>
-        <button
+        <button 
+          type="submit"
           class="btn btn-success btn-confirm"
           style="margin-left: 70px"
           :disabled="v$.form.$invalid"
