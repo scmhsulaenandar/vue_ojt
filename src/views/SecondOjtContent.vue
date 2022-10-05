@@ -1,6 +1,7 @@
 <template>
   <div class="container">
     <Header title="From OJT Project2"/>
+    <Navigation/>
     <div>
       <h2 class="sec-h2">{{ movieTitle }}</h2>
     </div>

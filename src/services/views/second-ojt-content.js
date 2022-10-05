@@ -1,11 +1,7 @@
-import Header from "../../components/Header.vue"
 import SecondContent from "../../components/SecondContent.vue"
-import Footer from "../../components/Footer.vue"
 export default {
     components: {
-        Header,
         SecondContent,
-        Footer
     },
     data() {
         return {

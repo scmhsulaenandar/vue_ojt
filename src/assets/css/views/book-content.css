@@ -1,0 +1,14 @@
+.container {
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+.container .book-title {
+    font-size: 24px;
+    color: #000000;
+}
+
+tbody .modal-title {
+    font-size: 24px;
+    color: #000000;
+}
