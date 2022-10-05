@@ -18,6 +18,7 @@
           <td>
             <a
               href="#"
+              @click="editBook(book)"
               data-bs-toggle="modal"
               :data-bs-target="'#exampleModal' + book.id"
               >{{ book.name }}</a
@@ -48,50 +49,56 @@
                     aria-label="Close"
                   ></button>
                 </div>
-                <div class="modal-body">
-                  <div class="edit-book">
-                    <label for="name" class="col-sm-3">Book Name</label>
-                    <input
-                      type="text"
-                      v-model="book.name"
-                      class="col-sm-6"
-                    /><br /><br />
+                <form @submit.prevent="onSubmit">
+                  <div class="modal-body">
+                    <div class="edit-book">
+                      <label for="name" class="col-sm-3">Book Name</label>
+                      <input
+                        type="text"
+                        v-model="updateBook.editName"
+                        class="col-sm-6"
+                      /><br /><br />
 
-                    <label for="price" class="col-sm-3">Price</label>
-                    <input
-                      type="number"
-                      v-model="book.price"
-                      class="col-sm-6"
-                    /><br /><br />
+                      <label for="price" class="col-sm-3">Price</label>
+                      <input
+                        type="number"
+                        v-model="updateBook.editPrice"
+                        class="col-sm-6"
+                      /><br /><br />
 
-                    <label for="author" class="col-sm-3">Author</label>
-                    <input
-                      type="text"
-                      v-model="book.author"
-                      class="col-sm-6"
-                    /><br /><br />
+                      <label for="author" class="col-sm-3">Author</label>
+                      <input
+                        type="text"
+                        v-model="updateBook.editAuthor"
+                        class="col-sm-6"
+                      /><br /><br />
 
-                    <label for="date" class="col-sm-3">Date</label>
-                    <input type="text" v-model="book.date" class="col-sm-6" />
+                      <label for="date" class="col-sm-3">Date</label>
+                      <input
+                        type="text"
+                        v-model="updateBook.editDate"
+                        class="col-sm-6"
+                      />
+                    </div>
                   </div>
-                </div>
-                <div class="modal-footer">
-                  <button
-                    type="button"
-                    data-bs-dismiss="modal"
-                    class="btn btn-secondary"
-                    data-dismiss="modal"
-                  >
-                    Cancel
-                  </button>
-                  <button
-                    type="submit"
-                    data-bs-dismiss="modal"
-                    class="btn btn-success"
-                  >
-                    Confirm
-                  </button>
-                </div>
+                  <div class="modal-footer">
+                    <button
+                      type="button"
+                      data-bs-dismiss="modal"
+                      class="btn btn-secondary"
+                      data-dismiss="modal"
+                    >
+                      Cancel
+                    </button>
+                    <button
+                      type="submit"
+                      data-bs-dismiss="modal"
+                      class="btn btn-success"
+                    >
+                      Confirm
+                    </button>
+                  </div>
+                </form>
               </div>
             </div>
           </div>
