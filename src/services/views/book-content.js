@@ -20,7 +20,7 @@ export default {
         ]
     },
     methods: {
-        editBook(editBooks) {
+        showEditBookModal(editBooks) {
             this.updateBook = {
                 editId: editBooks.id,
                 editName: editBooks.name,
@@ -28,7 +28,6 @@ export default {
                 editAuthor: editBooks.author,
                 editDate: editBooks.date
             };
-            console.log(editBooks)
         },
         onSubmit() {
             this.books.forEach(book => {

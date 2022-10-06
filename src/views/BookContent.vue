@@ -18,7 +18,7 @@
           <td>
             <a
               href="#"
-              @click="editBook(book)"
+              @click="showEditBookModal(book)"
               data-bs-toggle="modal"
               :data-bs-target="'#exampleModal' + book.id"
               >{{ book.name }}</a
