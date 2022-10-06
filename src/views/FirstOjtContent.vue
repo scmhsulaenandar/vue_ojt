@@ -1,6 +1,7 @@
 <template>
   <div class="container">
     <Header title="From OJT Project1"/>
+    <Navigation/>
     <Content/>
     <Footer/>
   </div>

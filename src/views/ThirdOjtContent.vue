@@ -1,6 +1,7 @@
 <template>
   <div class="container">
     <Header title="From OJT Project3" />
+    <Navigation/>
     <form @submit.prevent="onSubmit" class="third-form" ref="form">
       <!-- First and Last Name Row -->
       <div class="row">

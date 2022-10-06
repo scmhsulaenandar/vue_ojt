@@ -1,5 +1,3 @@
-import Header from "../../components/Header.vue"
-import Footer from "../../components/Footer.vue"
 import useVuelidate from '@vuelidate/core'
 import { required, email, url, sameAs } from '@vuelidate/validators'
 
@@ -11,11 +9,6 @@ export function validName(name) {
     return false;
 }
 export default {
-    components: {
-        Header,
-        Footer
-    },
-
     setup() {
         return { v$: useVuelidate() }
     },
