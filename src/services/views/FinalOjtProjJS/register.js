@@ -11,7 +11,7 @@ export function validName(name) {
 }
 export default {
     components: {
-        Birthday,
+        Birthday
     },
 
     setup() {
@@ -52,18 +52,19 @@ export default {
             }
         }
     },
+
     mounted() {
         if (localStorage.getItem("userList")) {
             this.userList = JSON.parse(localStorage.getItem("userList"))
         }
         this.form.userID = this.userList.length + 1;
-
     },
 
     methods: {
         resetform() {
             this.$refs.form.reset();
         },
+
         onSubmit() {
             if (this.isSubmitted) {
                 this.form.age = this.calculateAge();
@@ -72,13 +73,12 @@ export default {
                 this.$router.push({ name: "register-list" });
             }
             this.isSubmitted = true
-
-            console.log(this.form);
-
         },
+
         back() {
             this.isSubmitted = false
         },
+
         calculateAge() {
             let selectDate = this.form.date;
             let currentDate = new Date();

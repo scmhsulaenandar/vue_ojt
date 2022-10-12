@@ -4,14 +4,13 @@ export default {
     },
 
     data() {
-
         return {
             date: '',
             minYear: '',
             maxYear: ''
-
         }
     },
+
     computed: {
         calculateAge() {
             let selectDate = this.date;
