@@ -14,6 +14,9 @@
     <li class="nav-item">
       <router-link to="/book" class="nav-link">BookList</router-link>
     </li>
+    <li class="nav-item">
+      <router-link to="/register-list" class="nav-link">User List</router-link>
+    </li>
   </ul>
 </template>
 
