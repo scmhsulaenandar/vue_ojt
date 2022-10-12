@@ -1,3 +1,4 @@
+import Birthday from "../../../views/FinalOjtProjVue/Birthday.vue"
 import useVuelidate from '@vuelidate/core'
 import { required, email, sameAs } from '@vuelidate/validators'
 
@@ -9,6 +10,10 @@ export function validName(name) {
     return false;
 }
 export default {
+    components: {
+        Birthday,
+    },
+
     setup() {
         return { v$: useVuelidate() }
     },
@@ -24,6 +29,7 @@ export default {
                 email: '',
                 address: '',
                 date: '',
+                age: '',
                 userRole: ''
             },
             isSubmitted: false
@@ -60,19 +66,19 @@ export default {
         },
         onSubmit() {
             if (this.isSubmitted) {
+                this.form.age = this.calculateAge();
                 this.userList.push(this.form);
                 localStorage.setItem('userList', JSON.stringify(this.userList));
                 this.$router.push({ name: "register-list" });
             }
             this.isSubmitted = true
 
+            console.log(this.form);
+
         },
         back() {
             this.isSubmitted = false
-        }
-    },
-
-    computed: {
+        },
         calculateAge() {
             let selectDate = this.form.date;
             let currentDate = new Date();

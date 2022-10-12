@@ -1,3 +1,12 @@
 .signup-form {
     margin-bottom: 50px;
 }
+
+.reg-btn {
+    margin-top: 10px;
+    text-align: center;
+}
+
+.form-btn {
+    margin-right: 30px;
+}

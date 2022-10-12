@@ -127,32 +127,7 @@
             </div>
 
             <!-- DOB Row -->
-            <div class="row">
-              <div class="mb-3 col-md-3">
-                <label>DateOfBirth</label>
-              </div>
-              <div class="mb-3 col-md-4">
-                <input
-                  type="date"
-                  class="form-control"
-                  v-model="form.date"
-                  :disabled="isSubmitted"
-                />
-              </div>
-
-              <div class="mb-3 col-md-1">
-                <label>Age</label>
-              </div>
-
-              <div class="mb-3 col-md-3">
-                <input
-                  type="text"
-                  class="form-control"
-                  :disabled="true"
-                  v-model="calculateAge"
-                />
-              </div>
-            </div>
+            <Birthday v-model="form.date" :isSubmitted="isSubmitted" />
 
             <!-- User Role Row -->
             <div class="row">
@@ -176,7 +151,7 @@
             <div class="reg-btn" v-if="!isSubmitted">
               <button
                 type="button"
-                class="btn btn-secondary mb-3 col-md-3"
+                class="form-btn btn btn-secondary mb-3 col-md-3"
                 @click="resetform"
               >
                 Clear
@@ -192,7 +167,7 @@
             <div class="reg-btn" v-if="isSubmitted">
               <button
                 type="button"
-                class="btn btn-secondary mb-3 col-md-3"
+                class="form-btn btn btn-secondary mb-3 col-md-3"
                 @click="back"
               >
                 Back
